@@ -28,6 +28,10 @@ aside {
   padding: 10px;
   background-color: #efefef;
 }
+/*styling the logo*/
+logo{
+font-size: 2rem;
+}
 
 /* Optional styling to separate sections */
 header, footer {
