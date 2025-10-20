@@ -95,6 +95,55 @@ line-height:1.6;
 color:#ddd;
 };
 
+/* WHAT WE DO SECTION */
+.what-we-do {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #fff;
+  color: #333;
+}
+
+.what-we-do h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.what-we-do p {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  color: #666;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.service-item {
+  width: 200px;
+}
+
+.service-item span {
+  font-size: 4rem;
+  color: #FF6565;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.service-item h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+
 @media screen and (max-width: 480px) {
   header {
     flex-direction: column;
