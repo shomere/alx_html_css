@@ -3,7 +3,7 @@ margin:0;
 font-family: 'Source Sans-Pro', sans-serif;
 color:white;
 background-color: #121212;
-background-image:url ;
+background-image:url("images/headphones_hero_1.jpg")center/cover no-repeat;;
 }
 
 header{
@@ -41,7 +41,7 @@ color: #FF6565;
 
 .hero{
 height:100vh;
-background: url('images/headphones_hero.png') center/cover no-repeat;
+background: url('images/headphones_hero_1.jpg') center/cover no-repeat;
 position:relative;
 display:flex;
 justify-content:content;
@@ -423,6 +423,83 @@ footer {
 /* Add bounce to each result box */
 .our-results .item {
   animation: bounce 3s infinite ease-in-out;
+}
+
+/* === Header Styles === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff5c5c;
+}
+
+/* === Hamburger Menu === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* === Mobile Styles === */
+@media screen and (max-width: 480px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Animate hamburger when active */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 }
 
 }
