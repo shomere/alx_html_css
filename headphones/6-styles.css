@@ -1,190 +1,95 @@
-/* ==== GLOBAL STYLES ==== */
+
+/* === General === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
-
 body {
-  color: #fff;
-  background-color: #000;
+  color: #111;
 }
 
-h1, h2, p {
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-/* ==== HEADER ==== */
+/* === Header === */
 header {
-  width: 100%;
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.nav {
-  width: 90%;
-  max-width: 1100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 60px;
 }
-
-.logo, header img {
-  width: 160px;
+header img {
+  width: 140px;
 }
-
-.nav-links, nav ul {
-  list-style: none;
+nav ul {
   display: flex;
-  gap: 30px;
+  list-style: none;
+  gap: 25px;
 }
-
-.nav-links a, nav a {
-  color: white;
+nav a {
   text-decoration: none;
+  color: #333;
   font-weight: 600;
-  font-size: 16px;
-  transition: color 0.3s ease;
 }
-
-.nav-links a:hover, nav a:hover {
+nav a:hover {
   color: #ff6565;
 }
 
-/* ==== HERO SECTION ==== */
+/* === Hero === */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url("images/headphones_hero_1.jpg") center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
+  background: url('images/headphones_hero_1.jpg') center/cover no-repeat;
   color: #fff;
+  text-align: center;
+  padding: 180px 20px;
 }
-
-.hero-content {
-  max-width: 700px;
-}
-
-.hero-content h1, .hero h1 {
-  font-size: 48px;
-  font-weight: 700;
+.hero h1 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
-
-.hero-content p, .hero p {
-  font-size: 18px;
-  margin-bottom: 40px;
-  line-height: 1.6;
+.hero p {
+  margin-bottom: 30px;
 }
-
-.hero-content button, .hero button {
-  background-color: #ff6565;
-  color: white;
+.hero button {
+  background: #ff6565;
   border: none;
-  padding: 15px 40px;
+  color: #fff;
+  padding: 15px 35px;
   border-radius: 25px;
-  font-size: 16px;
   cursor: pointer;
-  font-weight: 600;
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.hero-content button:hover, .hero button:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-/* ==== WHAT WE DO SECTION ==== */
+/* === What We Do === */
 .what-we-do {
-  background-color: #fff;
-  color: #071629;
   text-align: center;
   padding: 80px 20px;
 }
-
-.what-we-do h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.what-we-do .intro {
-  font-size: 18px;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto 50px;
-  line-height: 1.6;
-}
-
-.activities, .services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
+.services {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 40px;
 }
-
-.activity, .service {
+.service {
   width: 220px;
-  margin: 0 auto;
 }
-
-.activity i, .service i {
-  font-size: 60px;
+.service i {
+  font-size: 2rem;
   color: #ff6565;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.activity h3, .service h3 {
-  font-size: 20px;
   margin-bottom: 10px;
 }
 
-.activity p, .service p {
-  font-size: 16px;
-  color: #555;
-}
-
-/* ==== OUR RESULTS SECTION ==== */
+/* === Our Results === */
 .our-results {
   text-align: center;
   padding: 80px 20px;
   background-color: #f9f9f9;
-  color: #111;
 }
-
 .our-results h2 {
   margin-bottom: 15px;
-  font-size: 32px;
 }
-
 .our-results p {
   margin-bottom: 50px;
   color: #666;
-  font-size: 18px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
 }
-
 .results-row {
   display: flex;
   justify-content: center;
@@ -206,75 +111,43 @@ header {
   align-items: center;
   transition: transform 0.3s ease;
 }
-
 .pentagon:hover {
   transform: scale(1.1);
 }
-
 .pentagon span {
   font-size: 1.3rem;
   font-weight: 700;
 }
-
 .pentagon p {
   font-size: 0.8rem;
-  color: #fff;
-  margin: 0;
 }
 
-/* ==== PLACEHOLDER SECTIONS ==== */
-.placeholder {
-  padding: 100px 20px;
-  text-align: center;
-  background-color: #2b2b2b;
-  border-top: 1px solid #444;
-}
-
-/* ==== FOOTER SECTION ==== */
+/* === Footer === */
 footer {
-  background-color: #071629;
-  padding: 60px 20px;
-  color: #fff;
   text-align: center;
+  background: #111;
+  color: #fff;
+  padding: 40px 20px;
 }
-
-.footer-container, .footer-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.footer-logo img, .footer-content img {
-  width: 150px;
-  margin-bottom: 20px;
-}
-
-.footer-socials, .socials {
+.footer-content {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 40px;
   margin-bottom: 20px;
 }
-
-.footer-socials a, .socials i {
-  color: #fff;
-  font-size: 24px;
-  transition: color 0.3s ease, transform 0.3s ease;
+.footer-content img {
+  width: 100px;
+}
+.socials i {
+  font-size: 1.4rem;
+  margin: 0 8px;
   cursor: pointer;
 }
-
-.footer-socials a:hover, .socials i:hover {
-  color: #FF6565;
-  transform: scale(1.1);
+.socials i:hover {
+  color: #ff6565;
 }
 
-.footer-text {
-  font-size: 14px;
-  color: #ccc;
-}
 
 /* ==== RESPONSIVE DESIGN ==== */
 @media (max-width: 768px) {
