@@ -1,4 +1,3 @@
-
 /* === General === */
 * {
   margin: 0;
@@ -6,8 +5,10 @@
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
+
 body {
   color: #111;
+  line-height: 1.5;
 }
 
 /* === Header === */
@@ -17,37 +18,45 @@ header {
   align-items: center;
   padding: 20px 60px;
 }
+
 header img {
   width: 140px;
 }
+
 nav ul {
   display: flex;
   list-style: none;
   gap: 25px;
 }
+
 nav a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
 }
+
 nav a:hover {
   color: #ff6565;
 }
 
-/* === Hero === */
+/* === Hero Section === */
 .hero {
   background: url('images/headphones_hero_1.jpg') center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 180px 20px;
 }
+
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
+
 .hero p {
   margin-bottom: 30px;
+  font-size: 1.1rem;
 }
+
 .hero button {
   background: #ff6565;
   border: none;
@@ -55,6 +64,11 @@ nav a:hover {
   padding: 15px 35px;
   border-radius: 25px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
 }
 
 /* === What We Do === */
@@ -62,17 +76,32 @@ nav a:hover {
   text-align: center;
   padding: 80px 20px;
 }
+
+.what-we-do h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.what-we-do .intro {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  color: #666;
+}
+
 .services {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
 }
+
 .service {
   width: 220px;
+  text-align: center;
 }
+
 .service i {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ff6565;
   margin-bottom: 10px;
 }
@@ -83,13 +112,18 @@ nav a:hover {
   padding: 80px 20px;
   background-color: #f9f9f9;
 }
+
 .our-results h2 {
   margin-bottom: 15px;
+  font-size: 2rem;
 }
+
 .our-results p {
   margin-bottom: 50px;
   color: #666;
 }
+
+/* Pentagon shape (no image) */
 .results-row {
   display: flex;
   justify-content: center;
@@ -97,9 +131,7 @@ nav a:hover {
   gap: 40px;
 }
 
-/* Pentagon shape using CSS only */
 .pentagon {
-  position: relative;
   width: 100px;
   height: 60px;
   background: #ff6565;
@@ -111,13 +143,16 @@ nav a:hover {
   align-items: center;
   transition: transform 0.3s ease;
 }
+
 .pentagon:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(3deg);
 }
+
 .pentagon span {
   font-size: 1.3rem;
   font-weight: 700;
 }
+
 .pentagon p {
   font-size: 0.8rem;
 }
@@ -129,6 +164,7 @@ footer {
   color: #fff;
   padding: 40px 20px;
 }
+
 .footer-content {
   display: flex;
   justify-content: center;
@@ -136,80 +172,53 @@ footer {
   gap: 40px;
   margin-bottom: 20px;
 }
+
 .footer-content img {
   width: 100px;
 }
+
 .socials i {
   font-size: 1.4rem;
   margin: 0 8px;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
+
 .socials i:hover {
   color: #ff6565;
 }
 
-
-/* ==== RESPONSIVE DESIGN ==== */
+/* === Responsive === */
 @media (max-width: 768px) {
-  .nav-links, nav ul {
-    display: none; /* Will be replaced by hamburger menu later */
-  }
-
-  .hero-content h1, .hero h1 {
-    font-size: 32px;
-  }
-
-  .activities, .services, .results-row {
-    gap: 30px;
-    flex-direction: column;
-    align-items: center;
+  nav ul {
+    display: none; /* Hamburger later */
   }
 
   .services, .results-row {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
+  }
+
+  header {
+    padding: 20px 30px;
   }
 }
 
 @media (max-width: 480px) {
-  .logo, header img {
-    width: 130px;
+  header img {
+    width: 120px;
   }
 
-  .hero-content h1, .hero h1 {
+  .hero {
+    padding: 120px 20px;
+  }
+
+  .hero h1 {
     font-size: 26px;
   }
 
   .what-we-do h2, .our-results h2 {
     font-size: 26px;
-  }
-
-  .what-we-do .intro, .our-results p {
-    font-size: 16px;
-  }
-
-  /* Mobile Footer */
-  .footer-logo img, .footer-content img {
-    width: 120px;
-  }
-
-  .footer-socials, .socials {
-    gap: 15px;
-  }
-
-  .footer-socials a, .socials i {
-    font-size: 20px;
-  }
-
-  .footer-text {
-    font-size: 12px;
-  }
-
-  header {
-    padding: 20px;
-  }
-  
-  .hero {
-    padding: 120px 20px;
   }
 }
